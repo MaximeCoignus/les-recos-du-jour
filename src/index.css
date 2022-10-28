@@ -9,6 +9,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  text-transform: capitalize;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
   box-sizing: border-box;
 }
 
-#app {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
@@ -62,6 +64,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .nav-link a:hover {
