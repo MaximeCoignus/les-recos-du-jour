@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "./context";
 
-function Navbar() {
-  const { sportsList, navSelected, setNavSelected, setOddSelected } =
-    useGlobalContext();
+function Navbar({ navSelected }) {
+  const { sportsList, setNavSelected } = useGlobalContext();
 
   const pickASport = (name) => {
     setNavSelected(name);
-    setOddSelected(0);
   };
 
+  useEffect(() => {
+    pickASport(navSelected);
+    // eslint-disable-next-line
+  }, [navSelected]);
+
   return (
-    <div className="navbar">
+    <div className="header-navbar">
       <nav className="nav-links">
         {sportsList.map((sport, index) => {
           const { name, url } = sport;
@@ -20,7 +23,7 @@ function Navbar() {
           return (
             <div
               key={index}
-              className={`nav-link ${selected && "nav-selected"}`}
+              className={`header-nav-link ${selected && "nav-selected"}`}
             >
               <Link to={url} onClick={() => pickASport(name)}>
                 {name}

@@ -6,7 +6,7 @@ import OddsSelection from "./OddsSelection";
 function TwoColTable({ navSelected }) {
   return (
     <>
-      <Navbar />
+      <Navbar navSelected={navSelected} />
       <div className="two-col">
         <OddsSelection navSelected={navSelected} />
         <OddsTable />

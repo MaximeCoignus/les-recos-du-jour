@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Routes>
-      {/* <Route path="/" element={<TwoColTable navSelected="football" />} /> */}
       <Route
         path="/football"
         element={<TwoColTable navSelected="football" />}

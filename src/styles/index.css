@@ -1,4 +1,5 @@
-:root {
+:root,
+.app {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -13,7 +14,8 @@
   text-transform: capitalize;
 }
 
-body {
+body,
+.app {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -43,7 +45,7 @@ body {
 }
 
 /* NAVBAR */
-.navbar {
+.header-navbar {
   background-color: #686868;
   height: 60px;
 }
@@ -54,20 +56,21 @@ body {
   gap: 10px;
 }
 
-.nav-link {
+.header-nav-link {
   width: 150px;
   height: 30px;
   margin: 15px 0;
 }
 
-.nav-link a {
+.header-nav-link a {
   text-decoration: none;
   color: #fff;
   font-size: x-large;
   cursor: pointer;
 }
 
-.nav-link a:hover {
+.header-nav-link a:hover {
+  color: #fff;
   border-bottom: #fff 1px solid;
 }
 
@@ -116,4 +119,25 @@ body {
 thead {
   background-color: #686868;
   color: #fff;
+}
+
+.result-table {
+  margin-top: 15px;
+}
+
+/* BOOKMAKERS SELECTOR */
+.dropdown {
+  display: flex;
+  justify-content: left;
+}
+
+.book-select-dropdown {
+  height: 50px;
+  width: 200px;
+}
+
+.book-select-menu {
+  width: 200px;
+  height: 500px;
+  overflow: scroll;
 }
